@@ -37,8 +37,12 @@ deactivate
 
 @myapp_obj.route("/") # http://127.0.0.1:5000/
 def main():
+    return redirect(url_for("login"))
+
+@myapp_obj.route("/recipes")
+def show_all_recipes():
     recipe = Recipe.query.all() # get all recipes
-    return render_template("hello.html", recipe=recipe)
+    return redirect("hello.html", recipe=recipe)
 
 @myapp_obj.route("/recipe/new", methods=['GET', 'POST']) # http://127.0.0.1:5000/recipe/new
 def create_recipe():

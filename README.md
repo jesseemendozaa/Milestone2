@@ -43,3 +43,17 @@ ALREADY IMPLEMENTED</br>
 ALREADY IMPLEMENTED</br>
 7. View All Recipes – The system shall allow users to view a list of all publicly available recipes.</br>
 ALREADY IMPLEMENTED</p>
+
+# To test functionality, please visit these endpoints and routes:
+```
+/login
+/registration
+/logout
+/recipe/new
+/recipe/<int>
+/recipe/<int>/delete
+/recipes
+```
+To test login, please use a test login profile:
+Username: admin
+Password: password
