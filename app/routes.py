@@ -41,8 +41,8 @@ def main():
 
 @myapp_obj.route("/recipes")
 def show_all_recipes():
-    recipe = Recipe.query.all() # get all recipes
-    return redirect("hello.html", recipe=recipe)
+    recipes = Recipe.query.all() # get all recipes
+    return render_template("hello.html", recipes=recipes)
 
 @myapp_obj.route("/recipe/new", methods=['GET', 'POST']) # http://127.0.0.1:5000/recipe/new
 def create_recipe():
